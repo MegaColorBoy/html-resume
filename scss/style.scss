@@ -33,13 +33,13 @@ ul {
 
 .resume-grid {
 	display: grid;
-	grid-gap: 25px;
+	grid-gap: 15px;
 	margin: 30px;
 }
 
 .resume-header {
 	display: grid;
-	grid-gap: 30px;
+	grid-gap: 15px;
 
 	h1 {
 		font-size: 42px;
@@ -83,7 +83,7 @@ ul {
 	display: grid;
 	// grid-template-columns: repeat(2, 1fr);
 	grid-template-columns: 0.3fr 0.7fr;
-	grid-gap: 50px;
+	grid-gap: 35px;
 
 	.column {
 		h2 {
@@ -161,7 +161,7 @@ ul {
 	align-items: baseline;
 
 	.content {
-		max-width: 350px;
+		max-width: 360px;
 		width: 100%;
 	}
 
