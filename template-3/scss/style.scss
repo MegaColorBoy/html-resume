@@ -1,0 +1,249 @@
+@import "../fonts/inter.css";
+
+:root {
+	--logo-url: url('../logo.svg');
+	--max-width: 700px;
+	--font-config: 14px/1.5 "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", 
+	Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 
+	"Segoe UI Symbol", "Noto Color Emoji";
+
+	// Colors palette
+	--black-color: #222222;
+	--transparent-black: rgba(34, 34, 34, 0.6);
+	--grey-color: #EEEEEE;
+	// --white-color: #F7F7F7;
+	--white-color: #FFFFFF;
+	--red-color: #FF5A5F;
+
+	// Font weights
+	--fw-thin: 100;
+	--fw-extra-light: 200;
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-semi-bold: 600;
+	--fw-bold: 700;
+	--fw-extra-bold: 800;
+	--fw-black: 900;
+
+	// dark theme colors
+	--dt-black-color: #101011;
+	--dt-white-color: #DDDDDD;
+	--dt-black-alt-color: #1D1D1D;
+	--dt-transparent-white: rgba(250, 250, 250, 0.6);
+}
+
+body {
+	font: var(--font-config);
+	line-height: 1.5;
+	margin: 0;
+	color: var(--black-color);
+}
+
+h1, h2, h3 {
+	letter-spacing: -1px;
+}
+
+a {
+	color: var(--red-color);
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0px;
+}
+
+.template {
+	width: 21cm;
+	height: 29.7cm;
+	border: 5px solid var(--black-color);
+}
+
+.highlight {
+	color: var(--red-color);
+}
+
+.resume-header {
+	display: grid;
+	grid-template-columns: 0.65fr 0.35fr;
+	grid-gap: 30px;
+	align-items: center;
+	justify-content: space-between;
+
+	.author-name {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		h1, p {
+			margin: 0;
+		}
+
+		h1 {
+			margin-bottom: 5px;
+		}
+
+		img {
+			width: 100px;
+			height: 100px;
+			transform: translateX(-10px);
+			margin-right: 5px;
+		}
+	}
+
+	.author-contact {
+		p {
+			margin: 0 0 5px 0;
+			display: inline-flex;
+			align-items: center;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		i {
+			margin-right: 10px;
+		}
+	}
+}
+
+.resume-wrapper {
+	margin: 30px;
+}
+
+.resume-body {
+	display: grid;
+	grid-template-columns: 0.65fr 0.35fr;
+	grid-gap: 30px;
+	margin-top: 30px;
+
+	h2 {
+		margin-top: 0px;
+		font-weight: 700;
+		&::after {
+			content: '';
+			width: 20px;
+			height: 4px;
+			background-color: var(--red-color);
+			display: block;
+			margin-top: 5px;
+		}
+
+		i {
+			margin-right: 10px;
+		}
+	}
+
+	.column {
+		.item {
+			margin-bottom: 30px;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.exp-row {
+	display: grid;
+	grid-template-columns: 0.25fr 0.75fr;
+	margin-bottom: 20px;
+	grid-gap: 7px;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.location {
+		// font-family: "Gibson-Light";
+		p {
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
+	}
+
+	.job-role {
+		p {
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
+
+		.duties {
+			// list-style: inside;
+			li {
+				margin-bottom: 2.5px;
+				&::last-child {
+					margin-bottom: 0px;
+				}
+				
+				&::before {
+					content: '';
+					background-image: url('../images/check.svg');
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center;
+					width: 13px;
+					height: 13px;
+					display: inline-block;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+
+.proj-row {
+	margin-bottom: 10px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	
+	p {
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+	a {
+		i {
+			margin-right: 5px;
+		}
+	}
+}
+
+.edu-row {
+	display: grid;
+	margin-bottom: 20px;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.location {
+		// font-family: "Gibson-Light";
+		p {
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
+	}
+
+	.institution {
+		p {
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.keywords {
+	// column-count: 2;
+	li {
+		margin-bottom: 5px;
+	}
+}
